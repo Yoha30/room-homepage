@@ -107,3 +107,11 @@
 #main, #secondary, #third {
     transition: 500ms opacity;
 }
+
+ul li:hover {
+    border-bottom: 3px solid gray;
+}
+
+ul li {
+    height: 24px;
+}
