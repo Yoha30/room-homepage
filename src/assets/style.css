@@ -1,0 +1,109 @@
+@media (min-width: 992px) {
+    .main-img {
+        background-image: url("images/desktop-image-hero-1.jpg");
+        position: relative;
+
+        background-size: cover;
+        height: calc(100vh - 30vh);
+    }
+
+    .secondary-img {
+        background-image: url("images/desktop-image-hero-2.jpg");
+        position: relative;
+
+        background-size: cover;
+        height: calc(100vh - 30vh);
+    }
+
+    .third-img {
+        background-image: url("images/desktop-image-hero-3.jpg");
+        position: relative;
+
+        background-size: cover;
+        height: calc(100vh - 30vh);
+    }
+
+    .mySlides {
+        transition-duration: 1s;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .main-img {
+        background-image: url("images/mobile-image-hero-1.jpg");
+        position: relative;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+
+    .secondary-img {
+        background-image: url("images/desktop-image-hero-2.jpg");
+        position: relative;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+    .third-img {
+        background-image: url("images/desktop-image-hero-3.jpg");
+        position: relative;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50vh;
+    }
+
+    #right-side {
+        height: 50vh !important;
+    }
+}
+
+.leading-space {
+    letter-spacing: 1em;
+}
+
+.leading-space-sm {
+    letter-spacing: 0.5em;
+}
+
+.angle-arrow {
+    background: black;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#right-side {
+    height: calc(100vh - 30vh);
+}
+
+@media (max-width: 576px) {
+    .w-full {
+        width: 100% !important;
+    }
+
+    #nav-list {
+        transform: translateY(-200%);
+        transition-duration: 500ms;
+    }
+
+    .open {
+        transform: translateY(0) !important;
+    }
+}
+
+#opened-menu {
+    transform: translateY(-100%);
+}
+
+#main, #secondary, #third {
+    transition: 500ms opacity;
+}

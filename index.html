@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="src/assets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Frontend Mentor | Room homepage</title>
+</head>
+<body>
+<div>
+    <div class="bg-white w-full h-20 fixed top-0 z-10 duration-500" id="opened-menu"></div>
+    <div id="open-menu" class="h-full w-full fixed top-20 right-0 z-50 bg-black/40 hidden"></div>
+    <div class="flex flex-col lg:flex-row place-items-center z-50">
+        <div id="background-img" class="w-full lg:w-3/5 md:p-10 relative">
+            <div class="block md:hidden">
+                <img id="main" src="src/assets/images/mobile-image-hero-1.jpg" class="-z-10 w-full h-full duration-500">
+                <img id="secondary" src="src/assets/images/mobile-image-hero-2.jpg"
+                     class="-z-10 w-full h-full duration-500 hidden">
+                <img id="third" src="src/assets/images/mobile-image-hero-3.jpg"
+                     class="-z-10 w-full h-full duration-500 hidden">
+            </div>
+            <div class="flex place-items-center justify-between w-3/5 md:w-3/4 xl:w-1/2 z-50 p-6 md:p-0 absolute md:static top-0">
+                <div class="block md:hidden">
+                    <img src="src/assets/images/icon-hamburger.svg" id="menu" class="z-50">
+                    <img src="src/assets/images/icon-close.svg" class="hidden z-50" id="close-modal">
+                </div>
+                <a href="#" id="logo">
+                    <img src="src/assets/images/logo.svg" class="w-16 h-4"></a>
+                <ul id="nav-list" class="hidden md:flex justify-between w-3/4 md:w-3/5">
+                    <li class="lowercase md:text-white"><a href="#"> Home</a></li>
+                    <li class="lowercase md:text-white"><a href="#"> Shop</a></li>
+                    <li class="lowercase md:text-white"><a href="#"> About</a></li>
+                    <li class="lowercase md:text-white"><a href="#"> Contact</a></li>
+                </ul>
+            </div>
+            <div class=" flex lg:hidden absolute bottom-0 right-0">
+                <div class="angle-arrow" onclick="plusSlides(-1)">
+                    <img src="src/assets/images/icon-angle-left.svg">
+                </div>
+                <div class="angle-arrow" onclick="plusSlides(1)">
+                    <img src="src/assets/images/icon-angle-right.svg">
+                </div>
+            </div>
+
+        </div>
+        <div id="right-side" class=" w-full md:w-10/12 xl:w-2/5 relative flex flex-col justify-center">
+            <div class="mySlides">
+                <h1 class="text-4xl md:text-2xl xl:text-3xl 2xl:text-4xl w-11/12 xl:w-3/5 mx-auto font-bold">Discover
+                    innovative ways to
+                    decorate</h1>
+                <p class="my-6 text-gray-500 w-11/12 xl:w-3/5 mx-auto text-sm 2xl:text-base font-medium">We provide
+                    unmatched quality,
+                    comfort,
+                    and style
+                    for
+                    property owners across the country.
+                    Our experts combine form and function in bringing your vision to life. Create a room in your
+                    own style with our collection and make your property a reflection of you and what you love.</p>
+            </div>
+            <div class="mySlides">
+                <h1 class="text-4xl md:text-2xl xl:text-3xl 2xl:text-5xl w-11/12 xl:w-3/5 mx-auto font-bold">We are
+                    available all across the globe</h1>
+                <p class="my-6 text-gray-500 w-11/12 xl:w-3/5 mx-auto font-medium">With stores all over the world, it's
+                    easy for you to find furniture for your home or place of business.
+                    Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
+                    store locator. Any questions? Don't hesitate to contact us today.</p>
+            </div>
+            <div class="mySlides">
+                <h1 class="text-4xl md:text-2xl xl:text-3xl 2xl:text-5xl w-11/12 xl:w-3/5 mx-auto font-bold">
+                    Manufactured with the best materials
+                </h1>
+                <p class="my-6 text-gray-500 w-11/12 xl:w-3/5 mx-auto font-medium">Our modern furniture store provide a
+                    high level of quality. Our company has invested in advanced technology
+                    to ensure that every product is made as perfect and as consistent as possible. With three decades of
+                    experience in this industry, we understand what customers want for their home and office.</p>
+            </div>
+            <a href="#"
+               class="flex place-items-center mx-auto leading-widest w-11/12 xl:w-3/5 leading-space uppercase font-medium hover:opacity-50 hover:duration-500">Shop
+                now <img class="mx-5 mt-1" src="src/assets/images/icon-arrow.svg"></a>
+            <div class="hidden lg:flex absolute bottom-0">
+                <div class="angle-arrow" onclick="plusSlides(-1)">
+                    <img src="src/assets/images/icon-angle-left.svg">
+                </div>
+                <div class="angle-arrow" onclick="plusSlides(1)">
+                    <img src="src/assets/images/icon-angle-right.svg">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row lg:h-[30vh]">
+        <img class=" lg:w-[30%]" src="src/assets/images/image-about-dark.jpg">
+        <div class=" lg:w-[40%] py-4 md:py-20 lg:py-4 2xl:py-6 px-4 md:px-20 lg:px-4 2xl:px-16">
+            <p class="leading-space-sm uppercase font-bold">About our furniture</p>
+            <p class="my-3 text-gray-500 font-medium md:w-11/12 text-xs md:text-base lg:text-xs 2xl:text-base">Our multifunctional collection
+                blends design and
+                function
+                to suit
+                your individual taste.
+                Make each room unique, or pick a cohesive theme that best express your interests and what
+                inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+                or anything in between. Product specialists are available to help you create your dream space.</p>
+        </div>
+        <img id="test" class=" lg:w-[30%]" src="src/assets/images/image-about-light.jpg">
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.querySelectorAll(".mySlides");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        if (slideIndex == 2) {
+            document.querySelector('#background-img').classList.remove('main-img')
+            document.querySelector('#background-img').classList.add('secondary-img')
+            document.querySelector('#background-img').classList.remove('third-img')
+            setTimeout(function () {
+                document.querySelector('#main').classList.add('opacity-0')
+                document.querySelector('#secondary').classList.remove('opacity-0')
+                document.querySelector('#third').classList.add('opacity-0')
+            }, 100)
+            document.querySelector('#main').classList.add('hidden')
+            document.querySelector('#secondary').classList.remove('hidden')
+            document.querySelector('#third').classList.add('hidden')
+        } else if (slideIndex == 3) {
+            document.querySelector('#background-img').classList.remove('main-img')
+            document.querySelector('#background-img').classList.remove('secondary-img')
+            document.querySelector('#background-img').classList.add('third-img')
+            setTimeout(function () {
+                document.querySelector('#main').classList.add('opacity-0')
+                document.querySelector('#secondary').classList.add('opacity-0')
+                document.querySelector('#third').classList.remove('opacity-0')
+            }, 100)
+
+            document.querySelector('#main').classList.add('hidden')
+            document.querySelector('#secondary').classList.add('hidden')
+            document.querySelector('#third').classList.remove('hidden')
+        } else {
+            document.querySelector('#background-img').classList.add('main-img')
+            document.querySelector('#background-img').classList.remove('secondary-img')
+            document.querySelector('#background-img').classList.remove('third-img')
+            setTimeout(function () {
+                document.querySelector('#main').classList.remove('opacity-0')
+                document.querySelector('#secondary').classList.add('opacity-0')
+                document.querySelector('#third').classList.add('opacity-0')
+            }, 100)
+            document.querySelector('#main').classList.remove('hidden')
+            document.querySelector('#secondary').classList.add('hidden')
+            document.querySelector('#third').classList.add('hidden')
+        }
+        slides[slideIndex - 1].style.display = "block";
+    }
+
+    const menu = document.querySelector('#menu');
+    const close = document.querySelector('#close-modal');
+    const logo = document.querySelector('#logo');
+    const navList = document.querySelector('#nav-list');
+    const openedMenu = document.querySelector('#opened-menu');
+
+    function handleMenu(e) {
+        if (!menu.classList.contains('hidden')) {
+            menu.classList.add('hidden');
+            close.classList.remove('hidden');
+            logo.classList.add('hidden');
+            navList.classList.remove('hidden')
+            navList.classList.add('flex')
+            setTimeout(function () {
+                navList.classList.add('open')
+            }, 400)
+            openedMenu.classList.add('open');
+            document.querySelector('#background-img div:nth-child(2)').classList.remove('3/5');
+            document.querySelector('#background-img div:nth-child(2)').classList.add('w-full');
+        }
+    }
+
+    function closeModal() {
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            close.classList.add('hidden');
+            logo.classList.remove('hidden');
+            setTimeout(function () {
+                navList.classList.add('hidden')
+                navList.classList.remove('flex');
+                document.querySelector('#background-img div:nth-child(2)').classList.remove('w-full');
+            }, 200)
+            navList.classList.remove('open');
+            openedMenu.classList.remove('open');
+            document.querySelector('#background-img div:nth-child(2)').classList.add('3/5');
+        }
+    }
+
+    close.addEventListener('click', closeModal);
+
+    menu.addEventListener('click', handleMenu)
+</script>
+</body>
+</html>
